@@ -1,25 +1,19 @@
 ﻿#include <iostream>
+#include <string>
+#include <cmath>
 #include "Vector2d.h"
 using namespace std;
 
 int main()
 {
-	Vector2d Vector(3, 3, 7, 7);
-	Vector.print();
-
-	Vector.mult(2.5);
-	Vector.print();
-
-	Vector2d Vector2(0.5, 0.5);
-	cout << Vector.scalarMult(Vector2) << endl;
-
-	Vector2d Vector3(Vector);
-	Vector3.print();
-
-	Vector.setx(5.5);
-	Vector.sety(5.5);
-	Vector.sum(Vector3);
-	Vector.print();
-	cout << Vector.getx() << endl;
-	cout << Vector.gety() << endl;
+	Vector2d v1(1, 3);
+	Vector2d v2(2,1);
+	cout << "Vector1: " << (string)v1 << endl;
+	cout << "Vector2: " << (string)v2 << endl;
+	cout << "Vector1 + Vector2: " << (string)(v1 + v2) << endl;
+	cout << "Vector1 - Vector2: " << (string)(v1 - v2) << endl;
+	cout << "Vector1 * 5: " << (string)(v1 * 5) << endl;
+	cout << "Vector1's Length: " << v1.length() << endl;
+	cout << "Scalar multiplication: " << v1 * v2 << endl;
+	cout << "Angle between Vector1 and Vector2: " << v1.angle(v2) << endl;
 }
