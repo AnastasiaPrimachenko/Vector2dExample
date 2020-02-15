@@ -5,7 +5,7 @@
 using namespace std;
 class Vector2d
 {
-	private: // закрытые данные, используются только внутри класса
+	private: 
 		double x, y;
 	public:
 		Vector2d() { x = 0; y = 0; }
@@ -25,21 +25,20 @@ class Vector2d
 		void print(void);
 		double angle(Vector2d);
 		double length();
-		Vector2d operator+(const Vector2d& vector);    //сложение векторов
-		Vector2d operator-(const Vector2d& vector);    //вычитание
-		double operator*(const Vector2d& vector);	   //скалярное умножение
-		Vector2d operator*(const double number);       //умножение вектора
-		friend Vector2d operator*(double, Vector2d&);  //на число
-		Vector2d& operator++();						   //инкремент, префиксный оператор
-		Vector2d operator++(int);					   //постфиксный
-		Vector2d& operator--();						   //декремент, префиксный оператор
-		Vector2d operator--(int);					   //постфиксный
-		const Vector2d& operator += (const Vector2d&); //операторы
-		const Vector2d& operator -= (const Vector2d&); //присвоения
+		Vector2d operator+(const Vector2d& vector);    
+		Vector2d operator-(const Vector2d& vector);    
+		double operator*(const Vector2d& vector);	  
+		Vector2d operator*(const double number);      
+		friend Vector2d operator*(double, Vector2d&);  
+		Vector2d& operator++();						   
+		Vector2d operator++(int);					   
+		Vector2d& operator--();						  
+		Vector2d operator--(int);					   
+		const Vector2d& operator += (const Vector2d&); 
+		const Vector2d& operator -= (const Vector2d&); 
 		double operator *= (const Vector2d&);
 		const Vector2d& operator *= (const double);
 		operator string();
-		//friend const Vector2d& operator*=(double, Vector2d&);
 };
 
 

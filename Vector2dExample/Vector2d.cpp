@@ -3,11 +3,10 @@
 #include <iostream>
 using namespace std;
 
-Vector2d::Vector2d(double x, double y) // создание вектора с заданными координатами
+Vector2d::Vector2d(double x, double y) 
 {
-	//обратиться к полям можно через указатель this, который явно передается в каждый метод
-	this->x = x;//доступ к полю через указатель this происходит с помощью оператора -&gt;
-	(*this).y = y; //использование точки возможно, в случае разыменования указателя
+	this->x = x;
+	(*this).y = y; 
 }
 
 Vector2d::Vector2d(double x1, double y1, double x2, double y2)
@@ -22,7 +21,7 @@ Vector2d::Vector2d(const Vector2d& Vector)
 	this->y = Vector.y;
 }
 
-void Vector2d::sum(Vector2d vector)//метод прибавления вектора b к данному вектору
+void Vector2d::sum(Vector2d vector)
 {
 	x = x + vector.x;
 	y = y + vector.y;
@@ -147,11 +146,6 @@ Vector2d::operator string()
 	string s = "(" + to_string(x) + ";" + to_string(y) + ")";
 	return s;
 }
-
-//const Vector2d operator*=(double number, Vector2d vector)
-//{
-//	return vector * number;
-//}
 
 Vector2d::~Vector2d()
 {
